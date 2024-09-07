@@ -16,8 +16,8 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 90px;
-    box-shadow: 0px 0px 7px;
-    background-color: rgb(21, 21, 21);
+    box-shadow: 0px 0px 7px #b409c3;
+    background-color: rgb(17, 17, 17);
 }
 .header-title {
     font-size: 27px;
@@ -57,7 +57,7 @@ header {
     height: 40px;
     font-size: 15px;
     font-weight: 600;
-    color: #e5e5e5;
+    color: #b4b4b4;
     letter-spacing: 3px;
     background-color: rgb(135, 27, 106);
     border: none;
@@ -113,8 +113,8 @@ main {
 .book-form {
     display: none; 
     margin-top: 40px;
-    border-top: 2px solid #807f7f;
-    border-bottom: 2px solid #807f7f;
+    border-top: 2px solid #611568;
+    border-bottom: 2px solid #611568;
     padding: 40px;
 }
 .book-form input {
@@ -129,7 +129,7 @@ main {
     background: transparent;
     outline: none;
     border: 3px solid black;
-    animation: border 0.9s ease-in-out infinite;
+    animation: border 1s ease-in-out infinite;
 }
 
 .book-entry {
@@ -162,9 +162,6 @@ main {
     margin: 30px 20px;
 }
 
-.read {
-    width: 15px;
-}
 
 #add-book-button {
     width: 90px;
@@ -189,4 +186,11 @@ main {
 }
 .btn-for-input:hover {
     transform: scale(1.02);
+}
+
+
+@media (max-width: 900px) {
+    .header-right ul {
+        display: none;
+    }
 }
