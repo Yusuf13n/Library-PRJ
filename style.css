@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Rubik", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    box-shadow: 0px 0px 5px;
+}
+.header-title {
+    font-size: 27px;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+}
+.header-title img {
+    width: 50px;
+    height: 50px;
+}
+.btn-header {
+    width: 110px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background-color: rgb(219, 219, 219);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.btn-header:hover {
+    opacity: 0.6;
+    
+}
+
+
+
+
+
+
+main {
+    margin-top: 50px;
+    text-align: center;
+}
+.btn-main {
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.btn-main:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.book-form {
+    display: none; 
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    padding: 40px;
+}
+.book-form input {
+    height: 23px;
+    margin: 10px;
+    outline: none;
+}
+
+.book-entry {
+    width: 170px;
+    height: 170px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    background-image: url(./image/free-icon-hardcover-2015113.png);
+    background-size: cover;
+    padding: 20px 38px;
+}
+#book-list h3 {
+    text-align: center;
+    margin-bottom: 7px;
+}
+#book-list {
+    display: flex;
+    gap: 50px;
+    font-size: 15px;
+    text-align: start;
+    margin: 30px 20px;
+}
+
+#read {
+    width: 20px;
+}
+
+#add-book-button {
+    width: 70px;
+    height: 30px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 5px;
+    border: 0.4px solid;
+}
+.btn-for-input {
+    width: 70px;
+    height: 30px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 5px;
+    border: 0.4px solid;
+    margin: 4px;
+}
+.btn-for-input:hover {
+    opacity: 0.6;
+}
