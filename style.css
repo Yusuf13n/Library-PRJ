@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #c5c4c4;
 }
 
 body {
     height: 100vh;
     font-family: "Rubik", sans-serif;
+    background-color: rgb(0, 0, 0);
 }
 
 header {
@@ -14,7 +16,8 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 90px;
-    box-shadow: 0px 0px 5px;
+    box-shadow: 0px 0px 7px;
+    background-color: rgb(21, 21, 21);
 }
 .header-title {
     font-size: 27px;
@@ -30,31 +33,33 @@ header {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
 }
 .header-right ul{
     display: flex;
-    gap: 40px;
+    gap: 50px;
 }
 .header-list {
     height: 21px;
     list-style: none;
     font-size: 17px;
-    font-weight: 440;
+    font-weight: 600;
+    color: #c5c4c4;
     letter-spacing: 1px;
     cursor: pointer;
 }
 .header-list:hover {
-    color: rgb(200, 100, 173);
+    color: rgb(215, 86, 151);
 }
 
 .btn-header {
     width: 110px;
     height: 40px;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
+    color: #e5e5e5;
     letter-spacing: 3px;
-    background-color: rgb(213, 110, 185);
+    background-color: rgb(135, 27, 106);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -62,7 +67,6 @@ header {
 }
 .btn-header:hover {
     opacity: 0.6;
-    
 }
 
 
@@ -77,44 +81,79 @@ main {
 .btn-main {
     width: 160px;
     height: 40px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 2px;
-    border: none;
-    border-radius: 6px;
+    background-color: rgb(31, 31, 31);
+    color: rgb(212, 121, 188);
+    border: 3px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    animation: border 0.9s ease-in-out infinite;
 }
-.btn-main:hover {
-    background-color: rgb(200, 200, 200);
+@keyframes border {
+  25% {
+    border-left: 3px solid #311f66;
+  }
+  50% {
+    border-top: 3px solid #64357c;
+  }
+  75% {
+    border-right: 3px solid #062940;
+  }
+  100% {
+    border-bottom: 3px solid #7d0088;
+  }
 }
+
 
 .book-form {
     display: none; 
     margin-top: 40px;
-    border: 1px solid #ccc;
+    border-top: 2px solid #807f7f;
+    border-bottom: 2px solid #807f7f;
     padding: 40px;
 }
 .book-form input {
     height: 23px;
     margin: 10px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 4px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: transparent;
     outline: none;
+    border: 3px solid black;
+    animation: border 0.9s ease-in-out infinite;
 }
 
 .book-entry {
     width: 170px;
     height: 170px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    border: 1px solid #eee;
-    background-image: url(./image/free-icon-hardcover-2015113.png);
-    background-size: cover;
     padding: 20px 38px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    background-image: url(./image/boooook.png);
+    background-size: cover;
+    border: none;
 }
 #book-list h3 {
     text-align: center;
-    margin-bottom: 7px;
+    margin: 10px 0px 7px 0px;
+    color: white;
 }
+#book-list p {
+    color: rgb(224, 224, 224);
+    font-size: 13px;
+    padding: 0px 5px;
+}
+
 #book-list {
     display: flex;
     gap: 50px;
@@ -123,31 +162,31 @@ main {
     margin: 30px 20px;
 }
 
-#read {
-    width: 20px;
+.read {
+    width: 15px;
 }
 
 #add-book-button {
-    width: 70px;
-    height: 30px;
-    letter-spacing: 1px;
-    font-size: 12px;
-    background-color: rgb(255, 255, 255);
-    color: black;
+    width: 90px;
+    height: 35px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(219, 219, 219);
     border-radius: 5px;
-    border: 0.4px solid;
 }
 .btn-for-input {
-    width: 70px;
-    height: 30px;
-    letter-spacing: 1px;
-    font-size: 12px;
+    width: 90px;
+    height: 35px;
+    letter-spacing: 2px;
+    font-size: 14px;
     background-color: rgb(0, 0, 0);
-    color: white;
+    color: rgb(225, 224, 224);
     border-radius: 5px;
-    border: 0.4px solid;
     margin: 4px;
+    border: 1px solid rgb(151, 43, 122);
+    transition: 0.4s ease-in-out;
 }
 .btn-for-input:hover {
-    opacity: 0.6;
+    transform: scale(1.02);
 }
