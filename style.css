@@ -57,9 +57,9 @@ header {
     height: 40px;
     font-size: 15px;
     font-weight: 600;
-    color: #b4b4b4;
+    color: #e2e2e2;
     letter-spacing: 3px;
-    background-color: rgb(135, 27, 106);
+    background-color: rgb(173, 55, 141);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -86,23 +86,22 @@ main {
     font-weight: 700;
     letter-spacing: 2px;
     background-color: rgb(31, 31, 31);
-    color: rgb(212, 121, 188);
+    color: rgb(209, 84, 176);
     border: 3px solid;
     border-radius: 10px;
     box-shadow: 0px 0px 10px;
     cursor: pointer;
     transition: 0.4s ease-in-out;
-    animation: border 0.9s ease-in-out infinite;
 }
 @keyframes border {
   25% {
-    border-left: 3px solid #311f66;
+    border-left: 3px solid #532572;
   }
   50% {
     border-top: 3px solid #64357c;
   }
   75% {
-    border-right: 3px solid #062940;
+    border-right: 3px solid #401d69;
   }
   100% {
     border-bottom: 3px solid #7d0088;
@@ -193,4 +192,84 @@ main {
     .header-right ul {
         display: none;
     }
+}
+
+
+
+
+
+
+
+footer {
+    margin-top: 250px;
+}
+.box {
+    position: relative;
+    margin: 100px auto;
+    width: 220px;
+    height: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    background: repeating-conic-gradient(from var(--a),#d14e91 0%, #d14e91 5%,
+    transparent 5%, transparent 40%, #d14e91 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+    z-index: 1; 
+}
+
+@property --a
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate
+{
+    0%
+    {
+        --a: 0deg;
+    }
+    100%
+    {
+        --a: 360deg;
+    }
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#0e5086 0%, #0e5086 5%,
+    transparent 5%, transparent 40%, #0e5086 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+    z-index: -1;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #000000;
+    border-radius: 15px;
+    border: 1px solid #000000;
+    z-index: -1;
+}
+.content { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.content h1 {
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: #d43688;
+    text-shadow: 0px 0px 10px #741464;
+    font-family: 'rubic', sans-serif;
 }
