@@ -16,7 +16,7 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 90px;
-    box-shadow: 0px 0px 7px #b409c3;
+    box-shadow: 0px 0px 13px #b409c3;
     background-color: rgb(17, 17, 17);
 }
 .header-title {
@@ -73,14 +73,14 @@ header {
 
 
 
-
 main {
     margin-top: 50px;
     text-align: center;
 }
+
 .btn-main {
     width: 160px;
-    height: 40px;
+    height: 42px;
     padding: 10px;
     font-size: 15px;
     font-weight: 700;
@@ -88,11 +88,16 @@ main {
     background-color: rgb(31, 31, 31);
     color: rgb(209, 84, 176);
     border: 3px solid;
+    margin-bottom: 50px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px;
     cursor: pointer;
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
+.btn-main:hover {
+    box-shadow: 0 0 30px;
+}
+
 @keyframes border {
   25% {
     border-left: 3px solid #532572;
@@ -110,12 +115,22 @@ main {
 
 
 .book-form {
+    width: 400px;
     display: none; 
-    margin-top: 40px;
-    border-top: 2px solid #611568;
-    border-bottom: 2px solid #611568;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid #611568;
     padding: 40px;
 }
+
+.inputs {
+    display: flex;
+    align-items: center;
+}
+.inputs label {
+    width: 80px;
+}
+
 .book-form input {
     height: 23px;
     margin: 10px;
@@ -131,36 +146,58 @@ main {
     animation: border 1s ease-in-out infinite;
 }
 
+
 .book-entry {
-    width: 170px;
-    height: 170px;
+    width: 220px;
+    height: 220px;
     padding: 20px 38px;
     margin-bottom: 10px;
     font-size: 14px;
-    border: 1px solid #eee;
-    background-image: url(./image/boooook.png);
-    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.612);
+    border-radius: 10px;
+    box-shadow: 0 0 10px violet;
+}
+.book-entry h3 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.book-entry p {
+    font-size: 17px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.book-entry button {
+    margin-left: 10px;
+}
+.btn-delete {
+    margin-top: 5px;
+    width: 130px;
+    height: 27px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    background-color: rgb(43, 43, 43);
+    color: rgb(255, 255, 255);
     border: none;
 }
-#book-list h3 {
-    text-align: center;
-    margin: 10px 0px 7px 0px;
-    color: white;
-}
-#book-list p {
-    color: rgb(224, 224, 224);
-    font-size: 13px;
-    padding: 0px 5px;
+.btn-Read {
+    display: block;
+    margin-top: 20px;
+    width: 130px;
+    height: 27px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(151, 60, 151);
+    border: none;
 }
 
 #book-list {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     font-size: 15px;
     text-align: start;
     margin: 30px 20px;
 }
-
 
 #add-book-button {
     width: 90px;
@@ -171,7 +208,10 @@ main {
     color: rgb(219, 219, 219);
     border-radius: 5px;
 }
+
+
 .btn-for-input {
+
     width: 90px;
     height: 35px;
     letter-spacing: 2px;
@@ -179,29 +219,21 @@ main {
     background-color: rgb(0, 0, 0);
     color: rgb(225, 224, 224);
     border-radius: 5px;
-    margin: 4px;
+    margin-top: 15px;
+    margin-left: 10px;
     border: 1px solid rgb(151, 43, 122);
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .btn-for-input:hover {
-    transform: scale(1.02);
+    opacity: 0.5;
 }
-
-
-@media (max-width: 900px) {
-    .header-right ul {
-        display: none;
-    }
-}
-
-
 
 
 
 
 
 footer {
-    margin-top: 250px;
+    margin-top: 150px;
 }
 .box {
     position: relative;
@@ -234,18 +266,7 @@ footer {
     }
 }
 
-.box::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: repeating-conic-gradient(from var(--a),#0e5086 0%, #0e5086 5%,
-    transparent 5%, transparent 40%, #0e5086 50%);
-    animation: animate 4s linear infinite;
-    animation-delay: -1s;
-    border-radius: 20px;
-    z-index: -1;
-}
+
 .box::after {
     content: '';
     position: absolute;
@@ -272,4 +293,12 @@ footer {
     color: #d43688;
     text-shadow: 0px 0px 10px #741464;
     font-family: 'rubic', sans-serif;
+}
+
+
+
+@media (max-width: 900px) {
+    .header-right ul {
+        display: none;
+    }
 }

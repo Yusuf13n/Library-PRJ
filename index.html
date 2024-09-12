@@ -24,25 +24,31 @@
     </header>
     <main>
         <div>
-        <button class="btn-main" id="new-book-button">+ Add book</button>
+        <button class="btn-main" id="new-book-button">Add book</button>
         </div>
+
         <div class="book-form">
             <h2>Information</h2>
+
+        <div class="inputs">
             <label for="author">Author:</label>
             <input type="text" id="author" name="author" required>
+        </div>
     
+        <div class="inputs">
             <label for="title">Name:</label>
             <input type="text" id="title" name="title" required>
+        </div>
     
+        <div class="inputs">
             <label for="pages">Page:</label>
             <input type="number" id="pages" name="pages" required>
-    
-            <label for="read">Read:</label>
-            <input type="checkbox" id="read" name="read">
+        </div>
     
             <button type="button" id="add-book-button" class="btn-for-input">Create</button>
             <button type="button" id="cancel-button" class="btn-for-input">Cancel</button>
         </div>
+
         <div id="book-list"></div>
     </main>
     <footer>

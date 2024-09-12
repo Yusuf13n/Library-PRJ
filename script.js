@@ -1,15 +1,15 @@
 const newBookButton = document.getElementById('new-book-button');
 const bookForm = document.querySelector('.book-form');
-const addBookButton = document.getElementById('add-book-button');
-const cancelButton = document.getElementById('cancel-button');
+const addBookButton = document.getElementById('add-book-button');    // кнопка create
+const cancelButton = document.getElementById('cancel-button');       // кнопка cancel
 const bookList = document.getElementById('book-list');
 
 
-function Book(title, author, pages, isRead) {
+
+function Book(title, author, pages) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.isRead = isRead;
 }
 
 
@@ -20,8 +20,33 @@ function addBookToList(book) {
         <h3>${book.title}</h3>
         <p>Author: ${book.author}</p>
         <p>Pages: ${book.pages}</p>
-        <p>Read: ${book.isRead ? 'Yes' : 'No'}</p>
         `;
+
+    const btnIsRead = document.createElement('button');
+    btnIsRead.textContent = 'Read'
+    btnIsRead.classList = 'btn-Read';
+
+    btnIsRead.addEventListener('click', () => {
+        if(btnIsRead.textContent === 'Read') {
+            btnIsRead.textContent = 'Not read';
+            btnIsRead.style.backgroundColor = '#0e5086';
+        }else {
+            btnIsRead.textContent = 'Read';
+            btnIsRead.style.backgroundColor = 'rgb(151, 60, 151)';
+        }
+    })
+
+
+    const btnDelete = document.createElement('button');
+    btnDelete.textContent = 'Remove'
+    btnDelete.classList = 'btn-delete';
+
+    btnDelete.addEventListener('click', () => {
+        newBookEntry.remove();
+    })
+
+    newBookEntry.append(btnIsRead, btnDelete);
+
     bookList.appendChild(newBookEntry);
 }
 
@@ -39,16 +64,14 @@ addBookButton.addEventListener('click', () => {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
-    const isRead = document.getElementById('read').checked;
 
     if (title && author && pages) {
-        const newBook = new Book(title, author, pages, isRead);
+        const newBook = new Book(title, author, pages);
             addBookToList(newBook);
 
         document.getElementById('title').value = '';
         document.getElementById('author').value = '';
         document.getElementById('pages').value = '';
-        document.getElementById('read').checked = false;
 
         bookForm.style.display = 'none';
     } else {
