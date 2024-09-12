@@ -85,7 +85,7 @@ main {
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 2px;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(29, 29, 29);
     color: rgb(209, 84, 176);
     border: 3px solid;
     margin-bottom: 50px;
@@ -98,33 +98,17 @@ main {
     box-shadow: 0 0 30px;
 }
 
-@keyframes border {
-  25% {
-    border-left: 3px solid #8e207f;
-  }
-  50% {
-    border-top: 3px solid #7d1e78;
-  }
-  75% {
-    border-right: 3px solid #401d69;
-  }
-  100% {
-    border-bottom: 3px solid #7d0088;
-  }
-}
-
-
 .book-form {
     width: 400px;
     display: none; 
     margin: auto;
     border-radius: 10px;
+    border: 2px solid #611568;
     padding: 40px;
-    box-shadow: 0 0 15px #8b0897;
 }
-
 .book-form h2 {
     margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 .inputs {
@@ -146,8 +130,8 @@ main {
     border-radius: 5px;
     background: transparent;
     outline: none;
-    border: 3px solid black;
-    animation: border 1s ease-in-out infinite;
+    border: 2px solid #611568;
+    box-shadow: 0 0 10px #611568;
 }
 
 
@@ -158,8 +142,8 @@ main {
     margin-bottom: 10px;
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.612);
-    border-radius: 10px;
-    box-shadow: 0 0 10px violet;
+    border-radius: 15px;
+    box-shadow: 0 0 13px rgb(207, 111, 207);
 }
 .book-entry h3 {
     text-align: center;
@@ -173,6 +157,10 @@ main {
 }
 .book-entry button {
     margin-left: 10px;
+    transition: 0.3s ease-in-out;
+}
+.book-entry button:hover {
+    opacity: 0.7;
 }
 .btn-delete {
     margin-top: 5px;
@@ -180,7 +168,7 @@ main {
     height: 27px;
     letter-spacing: 2px;
     border-radius: 5px;
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(38, 38, 38);
     color: rgb(255, 255, 255);
     border: none;
 }
@@ -189,7 +177,8 @@ main {
     margin-top: 20px;
     width: 130px;
     height: 27px;
-    border-radius: 6px;
+    border-radius: 5px;
+    letter-spacing: 2px;
     color: rgb(255, 255, 255);
     background-color: rgb(151, 60, 151);
     border: none;
@@ -213,7 +202,6 @@ main {
     border-radius: 5px;
 }
 
-
 .btn-for-input {
 
     width: 90px;
@@ -223,9 +211,9 @@ main {
     background-color: rgb(0, 0, 0);
     color: rgb(225, 224, 224);
     border-radius: 5px;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-left: 10px;
-    border: 2px solid rgb(113, 28, 90);
+    border: 1px solid rgb(151, 43, 122);
     transition: 0.3s ease-in-out;
 }
 .btn-for-input:hover {
@@ -241,9 +229,9 @@ footer {
 }
 .box {
     position: relative;
-    margin: 100px auto;
-    width: 220px;
-    height: 100px;
+    margin: 30px auto;
+    width: 190px;
+    height: 80px;
     border: 1px solid rgb(0, 0, 0);
     background: repeating-conic-gradient(from var(--a),#d14e91 0%, #d14e91 5%,
     transparent 5%, transparent 40%, #d14e91 50%);
